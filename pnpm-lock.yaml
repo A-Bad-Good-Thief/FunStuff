@@ -75,6 +75,9 @@ importers:
       eslint-config-next:
         specifier: 14.1.0
         version: 14.1.0(eslint@8.57.1)(typescript@5.9.3)
+      jiti:
+        specifier: ^1.21.7
+        version: 1.21.7
       postcss:
         specifier: ^8
         version: 8.5.15
