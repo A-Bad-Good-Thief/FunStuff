@@ -126,3 +126,41 @@ paybackPeriod  = (solutionInvestment / grossAnnual) × 12   (months)
 - **260 working days/yr** and **12-hour shifts** for time-reallocation math.
 - Retention savings are modeled as the **premium cost avoided by not using contract/travel labor** (contract rate − staff RN wage), not one-time replacement cost. `replacementCostPerNurse` ($52k) is still collected but is not part of the active formula.
 - Time reallocation is reported as an operational benefit but **deliberately excluded** from the financial ROI totals to avoid double-counting.
+
+---
+
+## Worked Example — Dollar Outputs With Default Values
+
+These are the exact results the calculator produces when every input is left at its default.
+
+### Per-Category Annual Savings
+| Category | Calculation | Annual Savings |
+|---|---|---|
+| Admission & Discharge | (112.5 / 60) × $55 × 8,700 | **$897,187.50** |
+| Fall Prevention | 95 × 25% × $35,000 | **$831,250.00** |
+| Sepsis | 140 × 15% × $32,000 | **$672,000.00** |
+| Readmission | 520 × 20% × $16,000 | **$1,664,000.00** |
+| Nurse Retention | 14.4 × 2,080 × $40 | **$1,198,080.00** |
+
+Notes:
+- Admission/discharge savings per patient = (112.5 / 60) × $55 = **$103.125**.
+- Retained nurses = 120 × 12% = **14.4**; premium per hour = $95 − $55 = **$40**.
+
+### ROI Totals
+| Metric | Calculation | Result |
+|---|---|---|
+| Gross Annual Savings | sum of 5 categories | **$5,262,517.50** |
+| Gross Quarterly Savings | 5,262,517.50 / 4 | **$1,315,629.38** |
+| VirtuAlly Investment | input | **$250,000.00** |
+| Net Annual Savings | 5,262,517.50 − 250,000 | **$5,012,517.50** |
+| Net Quarterly Savings | 1,315,629.38 − 62,500 | **$1,253,129.38** |
+| ROI Percentage | (5,012,517.50 / 250,000) × 100 | **≈ 2,005%** |
+| Payback Period | (250,000 / 5,262,517.50) × 12 | **≈ 0.57 months** |
+
+### Time Reallocation (reported separately, NOT in ROI totals)
+| Metric | Calculation | Result |
+|---|---|---|
+| Total Minutes/Year | 120 × 50 × 260 | **1,560,000 min** |
+| Total Hours/Year | 1,560,000 / 60 | **26,000 hrs** |
+| Total 12-hr Shifts/Year | 26,000 / 12 | **≈ 2,166.7 shifts** |
+| Dollar Value (if counted) | 26,000 × $55 | **$1,430,000.00** |
